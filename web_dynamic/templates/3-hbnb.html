@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css">
+    <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css">
+    <link rel="icon" href="../static/images/icon.png" />
+    <title>HBnB</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="static/scripts/3-hbnb.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+	  <div id="api_status" class="available"></div>
+    </header>
+    <div class="container">
+      <section class="filters">
+	<div class="locations">
+	  <h3>States</h3>
+	  <h4>&nbsp;</h4>
+	  <div class="popover">
+	    <ul>
+	      <li>
+		<h2>California:</h2>
+		<ul>
+		  <li>San Francisco</li>
+		  <li>Los Angeles</li>
+		  <li>San Jose</li>
+		  <li>Santa Clara</li>
+		</ul>
+	      </li>
+		<h2>New York:</h2>
+		<ul>
+          <li>New York</li>
+		  <li>New York City</li>
+		  <li>Brooklyn</li>
+		  <li>Queens</li>
+	      {% endfor %}
+	    </ul>
+	  </div>
+	</div>
+	<div class="amenities">
+	  <h3>Amenities</h3>
+	  <h4>&nbsp;</h4>
+	  <div class="popover">
+	    <ul>
+	      <li><input type="checkbox" data-id="1" data-name="Air Conditioning" > Air Conditioning</li>
+		  <li><input type="checkbox" data-id="2" data-name="Bar" > Bar</li>
+		  <li><input type="checkbox" data-id="3" data-name="Breakfast" > Breakfast</li>
+		  <li><input type="checkbox" data-id="4" data-name="Wifi" > Wifi</li>
+		  <li><input type="checkbox" data-id="5" data-name="Parking" > Parking</li>
+		  <li><input type="checkbox" data-id="6" data-name="Pool" > Pool</li>
+		  <li><input type="checkbox" data-id="7" data-name="TV" > TV</li>
+		  <li><input type="checkbox" data-id="8" data-name="Gym" > Gym</li>
+	    </ul>
+	  </div>
+	</div>
+	<button type="button">Search</button>
+      </section>
+      <div class="placesh1"><h1>Places</h1></div>
+      <section class="places">
+	<!-- <h1>Places</h1> -->
+	<article>
+	  <div class="title_box">
+	    <h2>Cozy Cottage</h2>
+	    <div class="price_by_night">$80</div>
+	  </div>
+	  <div class="information">
+	    <div class="max_guest">2 Guests</div>
+            <div class="number_rooms">1 Bedroom</div>
+            <div class="number_bathrooms">1 Bathroom</div>
+	  </div>
+	  <div class="user">
+            <b>Owner:</b> John Doe
+          </div>
+          <div class="description">
+			Escape to this charming cottage nestled in the woods. Perfect for a romantic getaway.
+          </div>
+	</article>
+
+	<article>
+		<div class="title_box">
+		  <h2>Apartment</h2>
+		  <div class="price_by_night">$50</div>
+		</div>
+		<div class="information">
+		  <div class="max_guest">4 Guests</div>
+			  <div class="number_rooms">2 Bedrooms</div>
+			  <div class="number_bathrooms">2 Bathrooms</div>
+		</div>
+		<div class="user">
+			  <b>Owner:</b> John Doe
+			</div>
+			<div class="description">
+			  Escape to this charming cottage nestled in the woods. Perfect for a romantic getaway.
+			</div>
+	  </article>
+
+	  <article>
+		<div class="title_box">
+		  <h2>Cozy Cottage</h2>
+		  <div class="price_by_night">$80</div>
+		</div>
+		<div class="information">
+		  <div class="max_guest">2 Guests</div>
+			  <div class="number_rooms">1 Bedroom</div>
+			  <div class="number_bathrooms">1 Bathroom</div>
+		</div>
+		<div class="user">
+			  <b>Owner:</b> John Doe
+			</div>
+			<div class="description">
+			  Escape to this charming cottage nestled in the woods. Perfect for a romantic getaway.
+			</div>
+	  </article>
+
+	  <article>
+		<div class="title_box">
+		  <h2>Cozy Cottage</h2>
+		  <div class="price_by_night">$80</div>
+		</div>
+		<div class="information">
+		  <div class="max_guest">2 Guests</div>
+			  <div class="number_rooms">1 Bedroom</div>
+			  <div class="number_bathrooms">1 Bathroom</div>
+		</div>
+		<div class="user">
+			  <b>Owner:</b> John Doe
+			</div>
+			<div class="description">
+			  Escape to this charming cottage nestled in the woods. Perfect for a romantic getaway.
+			</div>
+	  </article>
+      </section>
+    </div>
+    <footer>
+      <p>Holberton School</p>
+    </footer>
+  </body>
+</html>
