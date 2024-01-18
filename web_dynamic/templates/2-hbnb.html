@@ -51,6 +51,11 @@
 	      <li><input type="checkbox" data-id="1" data-name="Air Conditioning" > Air Conditioning</li>
 		  <li><input type="checkbox" data-id="2" data-name="Bar" > Bar</li>
 		  <li><input type="checkbox" data-id="3" data-name="Breakfast" > Breakfast</li>
+		  <li><input type="checkbox" data-id="4" data-name="Wifi" > Wifi</li>
+		  <li><input type="checkbox" data-id="5" data-name="Parking" > Parking</li>
+		  <li><input type="checkbox" data-id="6" data-name="Pool" > Pool</li>
+		  <li><input type="checkbox" data-id="7" data-name="TV" > TV</li>
+		  <li><input type="checkbox" data-id="8" data-name="Gym" > Gym</li>
 	    </ul>
 	  </div>
 	</div>
@@ -59,25 +64,77 @@
       <div class="placesh1"><h1>Places</h1></div>
       <section class="places">
 	<!-- <h1>Places</h1> -->
-	{% for place in places %}
 	<article>
 	  <div class="title_box">
-	    <h2>{{ place.name }}</h2>
-	    <div class="price_by_night">${{ place.price_by_night }}</div>
+	    <h2>Cozy Cottage</h2>
+	    <div class="price_by_night">$80</div>
 	  </div>
 	  <div class="information">
-	    <div class="max_guest">{{ place.max_guest }} Guest{% if place.max_guest != 1 %}s{% endif %}</div>
-            <div class="number_rooms">{{ place.number_rooms }} Bedroom{% if place.number_rooms != 1 %}s{% endif %}</div>
-            <div class="number_bathrooms">{{ place.number_bathrooms }} Bathroom{% if place.number_bathrooms != 1 %}s{% endif %}</div>
+	    <div class="max_guest">2 Guests</div>
+            <div class="number_rooms">1 Bedroom</div>
+            <div class="number_bathrooms">1 Bathroom</div>
 	  </div>
 	  <div class="user">
-            <b>Owner:</b> {{ place.user.first_name }} {{ place.user.last_name }}
+            <b>Owner:</b> John Doe
           </div>
           <div class="description">
-	    {{ place.description | safe }}
+			Escape to this charming cottage nestled in the woods. Perfect for a romantic getaway.
           </div>
 	</article>
-	{% endfor %}
+
+	<article>
+		<div class="title_box">
+		  <h2>Cozy Cottage</h2>
+		  <div class="price_by_night">$80</div>
+		</div>
+		<div class="information">
+		  <div class="max_guest">2 Guests</div>
+			  <div class="number_rooms">1 Bedroom</div>
+			  <div class="number_bathrooms">1 Bathroom</div>
+		</div>
+		<div class="user">
+			  <b>Owner:</b> John Doe
+			</div>
+			<div class="description">
+			  Escape to this charming cottage nestled in the woods. Perfect for a romantic getaway.
+			</div>
+	  </article>
+
+	  <article>
+		<div class="title_box">
+		  <h2>Cozy Cottage</h2>
+		  <div class="price_by_night">$80</div>
+		</div>
+		<div class="information">
+		  <div class="max_guest">2 Guests</div>
+			  <div class="number_rooms">1 Bedroom</div>
+			  <div class="number_bathrooms">1 Bathroom</div>
+		</div>
+		<div class="user">
+			  <b>Owner:</b> John Doe
+			</div>
+			<div class="description">
+			  Escape to this charming cottage nestled in the woods. Perfect for a romantic getaway.
+			</div>
+	  </article>
+
+	  <article>
+		<div class="title_box">
+		  <h2>Cozy Cottage</h2>
+		  <div class="price_by_night">$80</div>
+		</div>
+		<div class="information">
+		  <div class="max_guest">2 Guests</div>
+			  <div class="number_rooms">1 Bedroom</div>
+			  <div class="number_bathrooms">1 Bathroom</div>
+		</div>
+		<div class="user">
+			  <b>Owner:</b> John Doe
+			</div>
+			<div class="description">
+			  Escape to this charming cottage nestled in the woods. Perfect for a romantic getaway.
+			</div>
+	  </article>
       </section>
     </div>
     <footer>
