@@ -11,14 +11,8 @@ from flasgger.utils import swag_from
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 app.register_blueprint(app_views)
-<<<<<<< HEAD
-=======
 cors = CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
 CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
->>>>>>> 189d0d3a9851201fd7532a3827ccaf69d15cb594
-
-# Replace the current CORS configuration
-cors = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
 @app.teardown_appcontext
 def close_db(error):
