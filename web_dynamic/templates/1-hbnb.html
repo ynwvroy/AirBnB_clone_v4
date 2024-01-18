@@ -23,15 +23,21 @@
 	  <h4>&nbsp;</h4>
 	  <div class="popover">
 	    <ul>
-	      {% for state in states %}
 	      <li>
-		<h2>{{ state[0].name }}:</h2>
+		<h2>California:</h2>
 		<ul>
-		  {% for city in state[1] %}
-		  <li>{{ city.name }}</li>
-		  {% endfor %}
+		  <li>San Francisco</li>
+		  <li>Los Angeles</li>
+		  <li>San Jose</li>
+		  <li>Santa Clara</li>
 		</ul>
 	      </li>
+		<h2>New York:</h2>
+		<ul>
+          <li>New York</li>
+		  <li>New York City</li>
+		  <li>Brooklyn</li>
+		  <li>Queens</li>
 	      {% endfor %}
 	    </ul>
 	  </div>
@@ -41,9 +47,9 @@
 	  <h4>&nbsp;</h4>
 	  <div class="popover">
 	    <ul>
-	      {% for amenity in amenities %}
-	      <li><input type="checkbox" data-id="{{ amenity.id }}" data-name="{{ amenity.name }}" > {{ amenity.name }}</li>
-	      {% endfor %}
+	      <li><input type="checkbox" data-id="1" data-name="Air Conditioning" > Air Conditioning</li>
+		  <li><input type="checkbox" data-id="2" data-name="Bar" > Bar</li>
+		  <li><input type="checkbox" data-id="3" data-name="Breakfast" > Breakfast</li>
 	    </ul>
 	  </div>
 	</div>

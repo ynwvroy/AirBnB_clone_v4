@@ -1,28 +1,35 @@
-// Wait for DOM to be fully loaded
 $(document).ready(function () {
-  // Variable to store checked amenities
+  // Dictionary or list to store checked amenities
   var checkedAmenities = {};
 
-  // Function to update the h4 tag inside the div Amenities
-  function updateAmenities() {
-    var amenitiesList = Object.values(checkedAmenities).join(', ');
-    $('.amenities h4').text(amenitiesList);
-  }
-
   // Listen for changes on each input checkbox tag
-  $('.amenities ul li input[type="checkbox"]').change(function () {
-    var amenityId = $(this).data('id');
-    var amenityName = $(this).data('name');
+  $('input[type="checkbox"]').change(function () {
+      var amenityId = $(this).data('id');
+      var amenityName = $(this).data('name');
 
-    // If the checkbox is checked, store the Amenity ID
-    if ($(this).prop('checked')) {
-      checkedAmenities[amenityId] = amenityName;
-    } else {
-      // If the checkbox is unchecked, remove the Amenity ID
-      delete checkedAmenities[amenityId];
-    }
+      // Check if the checkbox is checked
+      if ($(this).is(':checked')) {
+          // Store the Amenity ID in the variable
+          checkedAmenities[amenityId] = amenityName;
+      } else {
+          // Remove the Amenity ID from the variable
+          delete checkedAmenities[amenityId];
+      }
 
-    // Update the h4 tag with the list of checked Amenities
-    updateAmenities();
+      // Update the h4 tag inside the div Amenities with the list of Amenities checked
+      updateSelectedAmenities();
   });
+
+  // Function to update the selected amenities
+  function updateSelectedAmenities() {
+      var selectedAmenitiesHtml = '';
+
+      // Loop through the checked amenities and build the HTML
+      for (var amenityId in checkedAmenities) {
+          selectedAmenitiesHtml += '<p>' + checkedAmenities[amenityId] + '</p>';
+      }
+
+      // Update the content inside the selected-amenities div
+      $('#selected-amenities').html(selectedAmenitiesHtml);
+  }
 });
